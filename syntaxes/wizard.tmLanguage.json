@@ -1,0 +1,111 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "BAIN Wizard",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#builtins"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#casters"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.wizard",
+					"match": "\\b(If|Elif|Else|While|For|Return|Break|Continue|EndIf|EndWhile|EndFor|SelectOne|SelectMany|Case|Default|EndSelect|Cancel|RequireVersions)\\b"
+				},
+				{
+					"name": "keyword.control.operator",
+					"match": "\\b(from|to|by|in|or|and|not)\\b"
+				}
+			]
+		},
+		"builtins": {
+			"patterns": [
+				{
+					"name": "support.function.wizard",
+					"match": "\\b(Note|SelectAll|SelectAllPlugins|SelectAllEspms|DeSelectAll|SelectSubPackage|SelectEspm|SelectPlugin|DeSelectEspm|DeSelectPlugin|DeSelectAllPlugins|DeSelectAllEspms|RenamePlugin|RenameEspm|ResetPluginName|ResetEspmName|ResetAllPluginNames|ResetAllEspmNames|DataFileExists|EditINI|DisableINI|CompareWBVersion|GetEspmStatus|GetPluginStatus)\\b"
+				}
+			]
+		},
+		"casters": {
+			"patterns": [
+				{
+					"name": "support.type.wizard",
+					"match": "\\b(int|str|float)\\b"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.single.sql",
+					"begin": "'",
+					"end": "'",
+					"patterns": [
+						{
+							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "string.quoted.double.sql",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"match": "\\\\."
+						}
+					]
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.character.wizard",
+					"begin": ";",
+					"end": "\n"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.wizard",
+					"match": "\\b(True|False|SubPackages)\\b"
+				},
+				{
+					"name": "constant.numeric.wizard",
+					"match": "[0-9]+(\\.[0-9]+)?"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.other.wizard",
+					"match": "[A-Za-z_][A-Za-z0-9_]*"
+				}
+			]
+		}
+	},
+	"scopeName": "source.wizard"
+}
