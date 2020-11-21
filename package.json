@@ -1,9 +1,13 @@
 {
     "name": "bain-wizard-language-support",
-    "displayName": "bain-wizard-language-support",
+    "displayName": "BAIN Wizard Language Support",
     "description": "Add support for BAIN Wizard scripting language.",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "Holt59",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Holt59/bain-wizard-language-support"
+    },
     "engines": {
         "vscode": "^1.51.0"
     },

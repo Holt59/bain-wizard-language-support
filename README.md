@@ -8,6 +8,6 @@ This extension currently only provides syntax highlighting for VS code.
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.2
 
 Initial release of `bain-wizard-language-support`.
